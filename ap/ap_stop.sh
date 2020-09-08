@@ -17,6 +17,7 @@ then
   if [ -n "$output" ]; then
     kill $1
   fi
+  iw $WLAN del
 fi
 
 if [ -d /sys/class/net/$WLAN2 ]
@@ -26,6 +27,7 @@ then
   if [ -n "$output" ]; then
     kill $1
   fi
+  iw $WLAN2 del
 fi
 
 echo "Terminating hostapd"
